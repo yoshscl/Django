@@ -1,0 +1,19 @@
+[
+  {
+    "model": "adray.testData",
+    "pk": 1,
+    "fields": {
+    "TestName":"Yahoo",
+    "clientID" : 1111,
+    "clientName" : "sharona",  
+    "testStatus": "not start",
+    "actionToDo":1.4,
+    "successMetric":"Leads",
+    "StartDate" : "2012-01-15",
+    "endDate":"2012-02-15",
+    "totalAvailableGeos":"3000|70005",
+    "selectedGeos":"null|null"
+  
+     }
+	}
+  ]

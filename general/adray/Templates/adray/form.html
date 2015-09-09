@@ -1,0 +1,61 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+  
+		
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                   
+                </div>
+                 <!-- /. ROW  -->
+                 <hr />
+               <div class="row">
+                <div class="col-md-12">
+                    <!-- Form Elements -->
+					
+					
+		
+                    <div class="panel panel-default">
+					 
+					
+                        <div class="panel-heading">
+						
+                            Input data for test
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    
+                                    <form role="form">
+                                        <div class="form-group">
+										
+										<form action="/home page/" method="post">
+                                           {% csrf_token %}
+                                         {{ form.as_table }}
+                                      <input type="submit" value="Submit" />
+                                      </form>
+		
+                                            
+                                        </div>
+                                    </form>
+                                 
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                     <!-- End Form Elements -->
+                </div>
+            </div>
+             
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+
+   
+</body>
+</html>
+	{% endblock %}

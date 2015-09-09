@@ -1,0 +1,76 @@
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'adray/style.css' %}" />
+
+
+
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 1200px;
+      height: 800px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart16445a6b43e9' class='rChart leaflet'></div>  
+    
+    <script>
+  var spec = {
+ "dom": "chart16445a6b43e9",
+"width":   1500,
+"height":    1200,
+"urlTemplate": "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+"layerOpts": {
+ "attribution": "Map data<a href=\"http://openstreetmap.org\">OpenStreetMap</a>\n   ontributors, Imagery<a href=\"http://mapbox.com\">MapBox</a>" 
+},
+"center": [ 46.016, -95.452 ],
+"zoom":      4,
+"id": "chart16445a6b43e9",
+"center": [ 46.016, -95.452 ],
+"zoom":      4 
+}
+
+  var map = L.map(spec.dom, {
+    fullscreenControl: true
+  }).setView(spec.center, spec.zoom);
+  
+    if (spec.provider){
+      L.tileLayer.provider(spec.provider).addTo(map)    
+    } else {
+	L.tileLayer(spec.urlTemplate, spec.layerOpts).addTo(map)
+    }
+L.circle([34.074917,-118.399698],500,{color:'black'}).addTo(map).bindPopup('53300').addTo(map)
+L.circle([30.307474,-97.768505],500,{color:'black'}).addTo(map).bindPopup('12075').addTo(map)
+L.circle([29.775964,-95.413175],500,{color:'black'}).addTo(map).bindPopup('5653').addTo(map)
+L.circle([29.468036,-98.506486],500,{color:'black'}).addTo(map).bindPopup('2974').addTo(map)
+L.circle([33.502514,-112.087164],500,{color:'black'}).addTo(map).bindPopup('2717').addTo(map)
+L.circle([32.799377,-96.793977],500,{color:'black'}).addTo(map).bindPopup('2345').addTo(map)
+L.circle([41.859456,-87.676305],500,{color:'black'}).addTo(map).bindPopup('2339').addTo(map)
+L.circle([33.805826,-84.400063],500,{color:'black'}).addTo(map).bindPopup('2255').addTo(map)
+L.circle([37.3974,-122.073197],500,{color:'black'}).addTo(map).bindPopup('1911').addTo(map)
+
+    if (spec.circle2){
+      for (var c in spec.circle2){
+        var circle = L.circle(c.center, c.radius, c.opts)
+         .addTo(map);
+      }
+    }
+    
+    
+    
+   
+</script>
+    
+  </body>
+</html>

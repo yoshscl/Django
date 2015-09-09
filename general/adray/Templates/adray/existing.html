@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+ {% for x in obj %}
+                <div id="page-inner">             
+                 <div class="row">
+                      <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; 
+							   <a  href="{% url 'test-existing_test' x.TestName %}"> View results</a>						   
+							   </strong>
+                             <p class="text-muted"> View test results of: {{ x.TestName }}</p>
+                        </div>
+                       
+                    </div>
+              </div>
+          </div>
+		  {% endfor %}
+	{% endblock %}

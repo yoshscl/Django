@@ -1,0 +1,16 @@
+[
+  {
+    "model": "adray.person",
+    "pk": 1,
+    "fields": {
+      "TestName": "Yahoo",
+     }
+  },
+  {
+    "model": "adray.person",
+    "pk": 2,
+    "fields": {
+      "TestName": "Google",
+         }
+  }
+]
